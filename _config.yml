@@ -25,7 +25,8 @@ title: 无声之地
 email: zychen2410@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Ziyan Chen's personal blog. Welcome to Land of Silence.
-  陈子彦的个人博客。欢迎来到无声之地。
+
+  CMander的个人博客。
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: #jekyllrb
