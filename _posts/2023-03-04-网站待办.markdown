@@ -12,3 +12,4 @@ categories: jekyll update
 4. 需要买个域名然后备案，可能还需要备案
 5. 得记得每次push到github上去
 6. 咕咕咕
+7. 怎么生成不了？
