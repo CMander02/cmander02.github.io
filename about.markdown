@@ -1,18 +1,22 @@
 ---
 layout: page
-title: About
+title: 关于
 permalink: /about/
 ---
+欢迎访问陈子彦的主页！
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+基本信息：
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+- 陈子彦，2002年4月出生于江西上饶。现美国波士顿大学电子和计算机工程专业硕士在读。
+- 2018年高中毕业于江西师范大学附属中学（高二），进入中国科学技术大学少年班学院。2022年本科毕业，获得理学学士学位。
+- 本站自用，作为自学Java的一个记录仓库，也兼发一些琐碎的文字。未来或许会加入更多功能吧。
+- 联系方式：zychen2410[at]gmail.com, crazychenzy[at]mail.utc.edu.cn
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+---
 
+关于本站：
+- 本站通过Github Pages+Jekyll搭建。
 
-[jekyll-organization]: https://github.com/jekyll
+---
+更新记录：
+20230306，增加基础信息。
