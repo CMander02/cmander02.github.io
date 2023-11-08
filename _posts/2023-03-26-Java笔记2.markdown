@@ -1,0 +1,148 @@
+---
+layout: post
+title:  "Java笔记2"
+date:   2023-03-06 16:16:52 -0500
+categories: jekyll update
+---
+
+1，JVM
+
+|         myprogram.java         |
+| :----------------------------: |
+| java API\|Java Vritual Machine |
+|      Java Virtual Machine      |
+|    Hardware-Based Platform     |
+
+性质:
+
+(1)简单的语言
+
+(2)面向对象的语言
+
+(3)平台无关性 (虚拟机 结构中立)
+
+(4)多线程
+
+(5)健壮性
+
+(6) 分布性
+
+(7) 安全性
+
+(8)高性能
+
+(9)动态性
+
+(10)解释
+
+(11)可移植
+
+***国内仍然大量使用Java8***
+
+
+
+---
+
+2,变量
+
+​	2.1，系统默认给所有数据类型赋值：数值为0，char为'\u0000'，bool为false，其他引用类型为null
+
+​	2.2，常量使用final： final type var=value. 常量只能初始化一次。
+
+​	2.3，枚举，（java.lang.Enum)
+
+~~~java
+public enum MyColor{ Red, Yellow, Blue }
+	MyColor color = MyColor.Red;
+for ( MyColor mycolor : MyColor.values() )
+	System.out.println( mycolor );
+//name()
+//ordinal()
+//toString()….
+~~~
+
+​	2.4，算数运算符
+
+​	java没有乘方，需要用Math.pow(x,exp).参数和返回值都是pow.
+
+​	2.5，x++&++x
+
+​	x++表示先参与其他运算，然后x=x+1，反之亦然
+
+​	2.6，逻辑运算：&&,||,!,^(xor)
+
+​	2.7，按位运算符：&,|,^,~,>>,<<,>>>
+
+​	<<左移会在二进制最低位补0；>>带符号右移，>>>不带符号右移
+
+​	2.8，三目运算符（可以嵌套）
+
+~~~java
+Expr1 ? Expr2 :Expr3
+//equals to if Expr1 then Expr2 Else Expr3
+~~~
+
+​	2.9,优先级
+
+​	
+
+| 优先级 | 运算符                                             | 结合性   |
+| ------ | -------------------------------------------------- | -------- |
+| 高     | . [] ()                                            | 从左至右 |
+|        | ++ -- + - ~ !                                      |          |
+|        | * / %                                              |          |
+|        | << >> >>>                                          |          |
+|        | < > <= >= intanceof                                |          |
+|        | == !=                                              |          |
+|        | &                                                  |          |
+|        | \|                                                 |          |
+|        | &&                                                 |          |
+|        | \|\|                                               | 从左至右 |
+|        | ? :                                                | 从右至左 |
+| 低     | = <br />*= /= %= += -= <br /><<= >>= >>>= &= ^=\|= | 从右至左 |
+
+
+
+---
+
+结构化程序设计
+
+1. if... else, switch
+
+2. while 循环
+
+3. do-while
+4. for循环
+
+---
+
+类，对象，方法
+
+
+$$
+抽象数据类型
+\left\{\begin{array}{l}
+\text { 说明 }\left\{\begin{array}{r}
+\text { 语法 } \\
+\text { 语义 }
+\end{array}\right. \\
+\text { 实现 }\left\{\begin{array}{l}
+\text { 属性 } \\
+\text { 方法 }
+\end{array}\right.
+\end{array}\right.
+$$
+封装，继承，多态
+
+定义：
+
+~~~
+[修饰符] class 类名 [extends 父类] [implements 接口名]
+{
+	类成员变量声明
+	类方法声明
+}
+类名 变量名 = new 类名()
+~~~
+
+修饰符：public abstract final

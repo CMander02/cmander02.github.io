@@ -1,0 +1,39 @@
+---
+layout: post
+title:  "Alist挂载网盘"
+date:   2023-03-06 16:16:52 -0500
+categories: jekyll update
+---
+
+### 1，前言
+[Alist](https://alist.nn.ci/)是一种支持多种储存的文件列表程序库，可以方便地将网盘挂载到一起实现聚合管理。下面是Windows中的Alist部署流程。
+
+### 2，本地安装Alist
+在[Github Release](https://github.com/Xhofe/alist/releases)页面下载需要的安装包，由于是windows系统，故选择[alist-windows-arm64.zip](https://github.com/alist-org/alist/releases/download/v3.28.0/alist-windows-arm64.zip).下载后在本地直接解压安装。
+
+解压完成后在安装目录的cmd下执行下列命令：
+```
+.\alist.exe server
+```
+会弹出一堆东西，其中有个初始密码。浏览器打开[网盘主界面](http://127.0.0.1:5244/)，账户选择admin，密码用刚才的初始密码，即可进入网盘管理界面。
+
+### 3，挂载网盘
+不同网盘的挂载方式不同，可以在[帮助文档](https://alist.nn.ci/zh/guide/drivers/)找到相应的说明。共通的流程是：
+- 通过登陆网盘或者F12打开控制台等方式拿到刷新令牌，并复制进网盘的设置中;
+- 为即将挂载的网盘分配盘名和排序位置
+- 回到[网盘主界面](http://127.0.0.1:5244/)，即可看到网盘挂载成功！
+  
+现在可以像操作所有的网页版网盘一样去操作Alist里的网盘了。
+
+### 4，简便启动
+Alist有卖50块钱的很好看的GUI，不过我感觉使用Alist网站给出的VBS启动脚本就行，必要性不高：
+```
+Dim ws
+Set ws = Wscript.CreateObject("Wscript.Shell")
+ws.run "alist.exe server",vbhide
+ws.Run "http://127.0.0.1:5244/"
+Wscript.quit
+```
+### 5，后续待办
+1. 是否可以将网盘挂载到服务器上，然后通过公网IP访问？
+2. 如何给Alist挂载qbittorrent和Aria2下载器？
