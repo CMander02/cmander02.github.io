@@ -26,7 +26,7 @@ categories: jekyll update
    
 ### 4，代码实现
 使用邻接矩阵实现如下：
-```
+{% highlight cpp %}
 #include <iostream>
 #include <queue>
 #define N 5
@@ -115,4 +115,4 @@ int main()
     }
     return 0;
 }
-```
+{% endhighlight %}
