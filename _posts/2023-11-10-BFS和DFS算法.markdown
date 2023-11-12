@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ABFS和DFS算法"
+title:  "BFS和DFS算法"
 date:   2023-11-10 20:51:17 -0500
 categories: jekyll update
 ---
