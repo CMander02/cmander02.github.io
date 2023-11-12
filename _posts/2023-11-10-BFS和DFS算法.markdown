@@ -1,0 +1,118 @@
+---
+layout: post
+title:  "ABFS和DFS算法"
+date:   2023-11-10 20:51:17 -0500
+categories: jekyll update
+---
+本文代码参考了[稀土掘金-C++ 广度优先BFS 算法-zhouchang](https://juejin.cn/post/6896441906822791175)
+### 1，图的表示方法
+- 邻接矩阵
+- 邻接链表
+  
+### 2，广度优先(BFS)算法
+步骤：
+1. 所有节点设置为未标记
+2. 选择一个节点作为起点并入队，标记为已访问
+3. 判断队列是否为空，不为空执行4
+4. 将起点出队，找到与起点相邻并且未被访问过的节点，将他们逐个从队尾插入，并标记为已访问
+5. 重复3，直到整个图都被遍历过。
+### 3,深度优先(DFS)算法
+步骤：
+1. 所有节点设置为未标记
+2. 选择一个节点作为起点并入栈，标记为已访问
+3. 判断栈是否为空，不为空执行4
+4. 将起点出栈，找到与起点相邻并且未被访问过的节点，将他们逐个入栈，并标记为已访问
+5. 重复3，直到整个图都被遍历过。
+   
+### 4，代码实现
+使用邻接矩阵实现如下：
+```
+#include <iostream>
+#include <queue>
+#define N 5
+using namespace std;
+
+//建立邻接矩阵
+int G[N][N] = {
+    { 0, 1, 1, 0, 0 },
+    { 0, 0, 1, 1, 0 },
+    { 0, 1, 0, 1, 0 },
+    { 1, 0, 0, 0, 0 },
+    { 0, 0, 1, 1, 0 }
+};
+
+//标记节点是否访问
+int visited[N] = { 0 };
+
+//BFS算法
+void BFS(int start)
+{
+    queue<int> Q;//存放邻接点
+    Q.push(start);
+    visited[start] = 1;//已访问置为1
+
+    while (!Q.empty())//存在邻接点
+    {
+        int front = Q.front();
+        //cout << front << " "; //取出访问的节点
+        Q.pop();//在Q中推出已访问的节点
+
+        for (int i = 0; i < N; i++)
+        {
+            // 节点i未被访问过且节点i是节点front的邻接点
+            if (!visited[i] && G[front][i] == 1)   
+            {
+                visited[i] = 1;//将 节点i 标记为已访问
+                Q.push(i);//Q中放入 节点i
+            }
+        }
+    }
+}
+
+//DFS算法
+void DFS(int start)
+{
+    stack<int> S;//存放邻接点
+    S.push(start);
+
+    while (!S.empty())//存在邻接点
+    {
+        int top = S.top();
+        S.pop();
+
+        if (!visited[top])
+        {
+            visited[top] = 1;//已访问置为1
+
+            for (int i = 0; i < N; i++)
+            {
+                // 节点i未被访问过且节点i是节点top的邻接点
+                if (!visited[i] && G[top][i] == 1)   
+                {
+                    S.push(i);//S中放入 节点i
+                }
+            }
+        }
+    }
+}
+
+int main()
+{
+    //从 节点0 开始遍历
+    for (int i = 0; i < N; i++)
+    {
+        //已经遍历过，跳过此节点，遍历下一个节点
+        if (visited[i] == 1)    
+            continue;
+        BFS(i); //遍历 节点i
+    }
+    for (int j = 0; j < N; j++)
+    {
+        //已经遍历过，跳过此节点，遍历下一个节点
+        if (visited[j] == 1)    
+            continue;
+        DFS(j); //遍历 节点i
+    }
+    return 0;
+}
+```
