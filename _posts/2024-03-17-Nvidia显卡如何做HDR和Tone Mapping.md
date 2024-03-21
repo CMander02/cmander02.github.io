@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Nvidia显卡如何做HDR和Tone Mapping"
-date:   2023-03-17 17:49:30 -0500
+date:   2024-03-17 17:49:30 -0500
 categories: jekyll update
 ---
 [toc]
