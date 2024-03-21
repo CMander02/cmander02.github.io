@@ -18,7 +18,7 @@ categories: jekyll update
 - Windows商店下载校色软件，手动校色，保存校色文件。
 
 ### 1.Nvidia控制面板开启对应功能
-打开Nvidia控制面板，左侧选视频-调整视频图像设置--RTX视频增强-超分辨率，按需勾选质量。
+打开Nvidia控制面板，左侧选视频-调整视频图像设置--RTX视频增强-超分辨率，按需勾选质量。一般自动即可。
 
 ### 2.PotPlayer设置
 安装PotPlayer后，选项-视频，
