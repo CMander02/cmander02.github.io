@@ -1,0 +1,70 @@
+---
+layout: post
+title:  "Markdown笔记"
+date:  2024-03-20 21:05:33 -0500
+categories: jekyll update
+---
+
+[TOC]
+
+***
+
+得益于Markdown对html的兼容性，很多html的语法可以直接嵌套进Markdown以增加文本的多样性。
+
+## 1.Markdown 如何添加文献引用[<sup>1</sup>](#ref-anchor-1)
+
+markdown原生支持超链接，比如
+
+[这是Firefox浏览器的下载页](https://www.mozilla.org/en-US/firefox/new/)
+
+其格式为
+
+```html
+[标题](链接)
+```
+注意，Markdown只渲染最近的一组方圆括号。本部分最后有示例。
+接下来可以为上面的内容增加锚点:
+
+```html
+<div id="refer-anchor"></div>
+
+[标题](链接)
+```
+
+点击这个浮起来的蓝色小test[<sup>test</sup>](#refer-anchor)，就能自动滚动到锚点所在的的位置。语法如下所示。
+```html
+[<sup>ref</sup>](#id)
+```
+
+
+## 2.Markdown如何生成目录[<sup>2</sup>](#ref-anchor-2)
+方法1，非常简单，在文章开头加入
+```
+[TOC]
+```
+就好了，大小写不限，但是需要一致。这样生成的目录包含了Markdwon语法里面1~6个 # 的所有标题，非常方便。缺点是没有对应文章子部分的链接。
+
+方法2，全局安装doctoc插件并执行之
+```
+npm install doctoc -g
+cd ./curentfolder
+doctoc whateveryouwant.md
+```
+这样可以生成目录链接，更方便跳转，但是需要npm。
+
+## 3.Jekyll环境下语法高亮
+Jekyll环境下的Markdown文件不能像Typora一样有方便的语法高亮，所幸我们还可以这样
+```
+{% highlight [language] %}
+{% endhighlight %}
+```
+
+## 4.参考
+
+<div id="refer-anchor-1"></div>
+
+- [1] [Markdown 添加文献引用](https://blog.csdn.net/u012349679/article/details/103815049)
+
+<div id="refer-anchor-2"></div>
+
+- [2] [markdown文件生成目录的方式 ](https://www.cnblogs.com/RainFate/p/15723607.html)
