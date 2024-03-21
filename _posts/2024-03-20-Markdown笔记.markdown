@@ -55,10 +55,10 @@ doctoc whateveryouwant.md
 ## 3.Jekyll环境下语法高亮
 Jekyll环境下的Markdown文件不能像Typora一样有方便的语法高亮，所幸我们还可以这样
 ```
-{% highlight [language] %}
-{% endhighlight %}
+\{\% highlight [language] \%\}
+\{\% endhighlight \%\}
 ```
-
+因为Jekyll的识别问题，使用时需要删去上面的所有“\”。
 ## 4.参考
 
 <div id="refer-anchor-1"></div>
