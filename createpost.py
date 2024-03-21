@@ -34,8 +34,6 @@ title:  "{title}"
 date:  {current_date.strftime('%Y-%m-%d %H:%M:%S')} -0500
 categories: jekyll update
 ---
-[TOC]
-***
 """
 
 # 写入内容到Markdown文件

@@ -4,7 +4,11 @@ title:  "Nvidia显卡如何做HDR和Tone Mapping"
 date:   2024-03-17 17:49:30 -0500
 categories: jekyll update
 ---
-[toc]
+- [0.打开HDR](#0打开hdr)
+- [1.Nvidia控制面板开启对应功能](#1nvidia控制面板开启对应功能)
+- [2.PotPlayer设置](#2potplayer设置)
+- [3.其他未设置](#3其他未设置)
+***
 
 超分辨是通过软硬件增加画面的分辨率和码率的一种手段。本文只介绍**Windows操作系统**基于**Nvidia显卡+potplayer播放器**的超分辨方式。
 

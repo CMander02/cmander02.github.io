@@ -5,7 +5,11 @@ date:  2024-03-20 21:05:33 -0500
 categories: jekyll update
 ---
 
-[TOC]
+- [1.Markdown 如何添加文献引用1](#1markdown-如何添加文献引用1)
+- [2.Markdown如何生成目录2](#2markdown如何生成目录2)
+- [3.Jekyll环境下语法高亮](#3jekyll环境下语法高亮)
+- [4.参考](#4参考)
+
 
 ***
 
@@ -43,6 +47,8 @@ markdown原生支持超链接，比如
 [TOC]
 ```
 就好了，大小写不限，但是需要一致。这样生成的目录包含了Markdwon语法里面1~6个 # 的所有标题，非常方便。缺点是没有对应文章子部分的链接。
+
+20240320更新：Github和Gitee均不支持toc，建议本地编辑时使用markdown all in one create table of contents 命令编写目录。
 
 方法2，全局安装doctoc插件并执行之
 ```
